@@ -1,10 +1,11 @@
 import axios from "axios";
 
+// 🔥 Use your Render backend URL
 const API = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL, // http://localhost:5000/api
+  baseURL: "https://linkedin-clone-mt1e.onrender.com/api",
 });
 
-// Optional: automatically attach token if you store Firebase user token
+// Optional: automatically attach token if using Firebase Auth
 API.interceptors.request.use(async (config) => {
   const token = localStorage.getItem("authToken");
   if (token) config.headers.Authorization = `Bearer ${token}`;
