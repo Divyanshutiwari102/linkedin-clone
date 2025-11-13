@@ -2,7 +2,7 @@ import axios from "axios";
 
 // 🔥 Use your Render backend URL
 const API = axios.create({
-  baseURL: "https://linkedin-clone-mt1e.onrender.com/api",
+  baseURL: "import.meta.env.VITE_API_BASE_URL",
 });
 
 // Optional: automatically attach token if using Firebase Auth
