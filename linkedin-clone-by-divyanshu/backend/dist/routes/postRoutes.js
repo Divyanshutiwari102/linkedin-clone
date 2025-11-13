@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const postController_1 = require("../controllers/postController");
+const verifyFirebaseToken_1 = require("../middleware/verifyFirebaseToken");
+const router = (0, express_1.Router)();
+router.get("/", postController_1.getPosts);
+router.post("/", verifyFirebaseToken_1.verifyFirebaseToken, postController_1.createPost);
+router.post("/:postId/like", verifyFirebaseToken_1.verifyFirebaseToken, postController_1.toggleLike);
+exports.default = router;
