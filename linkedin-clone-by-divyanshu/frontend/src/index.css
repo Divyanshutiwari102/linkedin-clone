@@ -1,0 +1,67 @@
+/* 🌟 Global Styles (No Tailwind) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(156, 163, 175, 0.6);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(107, 114, 128, 0.8);
+}
+
+/* Body */
+body {
+  background-color: #f3f2ef;
+  color: #1f1f1f;
+  font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* App container for overall layout */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* App wrapper */
+.app-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Toastify */
+.Toastify__toast {
+  font-size: 0.9rem;
+  border-radius: 8px;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* LinkedIn Button */
+.btn-linkedin {
+  background-color: #0077b5;
+  color: white;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 9999px;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  cursor: pointer;
+}
+.btn-linkedin:hover {
+  background-color: #005f8c;
+}

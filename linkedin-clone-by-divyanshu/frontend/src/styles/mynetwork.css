@@ -1,0 +1,93 @@
+.network-container {
+  display: flex;
+  gap: 20px;
+  padding: 15px 0;
+}
+
+/* LEFT */
+.network-left {
+  width: 65%;
+}
+
+.network-left h2 {
+  margin-bottom: 15px;
+}
+
+.profiles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 15px;
+}
+
+.profile-card {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #eee;
+  transition: 0.2s;
+}
+
+.profile-card:hover {
+  background: #f3f2ef;
+}
+
+.profile-photo {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-card h3 {
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+
+.profile-card p {
+  color: gray;
+  font-size: 14px;
+}
+
+.connect-btn {
+  margin-top: 12px;
+  padding: 8px 15px;
+  background: #0a66c2;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.connect-btn:hover {
+  background: #004182;
+}
+
+/* RIGHT */
+.network-right {
+  width: 35%;
+}
+
+.invitation-box,
+.discover-box {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  margin-bottom: 20px;
+}
+
+.discover-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.discover-box li {
+  padding: 8px 0;
+  cursor: pointer;
+  color: #0a66c2;
+}
+
+.discover-box li:hover {
+  text-decoration: underline;
+}

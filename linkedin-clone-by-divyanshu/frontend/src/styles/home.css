@@ -1,0 +1,390 @@
+/* src/styles/home.css
+   ✅ Fixed & deduped LinkedIn-like home page styles
+   Maintainer: Divyanshu Tiwari (adapted)
+*/
+
+:root{
+  --card-bg: #fff;
+  --muted: #6b6b6b;
+  --accent: #0a66c2;
+  --surface: #f3f2ef;
+  --radius: 10px;
+  --shadow: 0 6px 18px rgba(0,0,0,0.06);
+  --max-width: 1180px;
+  --gap: 20px;
+  --sidebar-width: 260px;
+  --rightbar-width: 300px;
+}
+
+/* Base */
+* { box-sizing: border-box; }
+body {
+  background-color: var(--surface);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #111;
+  margin: 0;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  padding: 10px 28px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-left { display:flex; align-items:center; gap:12px; }
+.nav-logo { height: 44px; width: auto; cursor: pointer; display:block; }
+.search-bar {
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  width: 260px;
+  outline: none;
+}
+.nav-right { display:flex; gap:18px; align-items:center; }
+.nav-right button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  color: #555;
+}
+.nav-right button:hover { color: var(--accent); }
+
+/* COVER / HERO */
+.cover-section .cover-photo {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+/* MAIN GRID (left sidebar | feed | rightbar) */
+.main-grid, .home-wrapper {
+  max-width: var(--max-width);
+  margin: 18px auto;
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr var(--rightbar-width);
+  grid-template-columns: 280px 1fr 320px;
+  gap: var(--gap);
+  padding: 0 18px;
+  align-items: start;
+}
+
+/* SIDEBAR / LEFT CARD */
+.sidebar, .left-card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Profile card container */
+.profile-card, .left-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  text-align: center;
+  padding-bottom: 14px;
+}
+
+/* Cover in sidebar (top of profile card) */
+.profile-cover {
+  width: 100%;
+  height: 85px;    /* compact like LinkedIn */
+  object-fit: cover;
+  border: none;
+  display: block;
+}
+
+/* Avatar overlapping cover */
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  margin-top: -40px; /* pulls avatar up over cover */
+  object-fit: cover;
+  background: #fff;
+  display: inline-block;
+}
+
+/* Profile text */
+.profile-card h3 {
+  margin: 12px 0 2px;
+  font-size: 17px;
+  font-weight: 600;
+}
+.profile-card p {
+  margin: 0 0 10px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* Profile stats block */
+.profile-stats {
+  background-color: #fafafa;
+  padding: 12px 14px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+.profile-stats p {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #444;
+}
+.profile-stats strong { color: #111; }
+
+/* Extra links list in sidebar */
+.extra-section {
+  text-align: left;
+  padding: 12px 18px;
+  color: #444;
+}
+.extra-section p {
+  margin: 8px 0;
+  cursor: pointer;
+}
+.extra-section p:hover { color: var(--accent); }
+
+/* FEED (center) */
+.feed, .post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Create post box */
+.create-post-box, .create-post {
+  background: var(--card-bg);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  box-shadow: var(--shadow);
+}
+.create-post-box input,
+.create-post input[type="text"] {
+  flex: 1;
+  border: none;
+  background: #f1f1f1;
+  padding: 10px 14px;
+  border-radius: 24px;
+  outline: none;
+}
+.small-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #fff;
+  border: 2px solid #fff;
+}
+
+/* Post card */
+.post-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: var(--shadow);
+}
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.post-header img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+.post-header h4 { margin: 0; font-size: 15px; }
+.post-header p { margin: 0; color: var(--muted); font-size: 13px; }
+.post-description, .post-body { margin-top: 10px; color: #222; line-height: 1.5; }
+.post-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 12px;
+  object-fit: cover;
+}
+
+/* Post footer */
+.post-footer {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+  margin-top: 12px;
+  color: var(--muted);
+}
+.post-footer button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+.post-footer button:hover { color: var(--accent); }
+
+/* RIGHTBAR */
+.rightbar, .right-card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.news-card, .ad-card, .suggested-card, .right-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 14px;
+  box-shadow: var(--shadow);
+}
+.news-card h3 { margin: 0 0 8px; }
+.news-card ul { list-style: none; padding-left: 12px; margin: 0; color: var(--muted); }
+.ad-card img { width: 100%; border-radius: 8px; object-fit: cover; }
+
+/* MODAL */
+.modal-overlay {
+  position: fixed; inset:0; display:flex; align-items:center; justify-content:center;
+  background: rgba(0,0,0,0.45);
+  z-index: 2000;
+}
+.modal {
+  width: 480px;
+  max-width: calc(100% - 32px);
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+.modal textarea { width:100%; height:110px; padding:10px; border-radius:8px; border:1px solid #e6e6e6; }
+
+/* TERMS / FOOTER TEXT */
+.terms-text {
+  text-align: center;
+  color: #777;
+  font-size: 13px;
+  margin: 30px 0;
+  border-top: 1px solid #ddd;
+  padding-top: 15px;
+}
+
+/* UTILS & RESPONSIVE */
+@media (max-width: 1200px) {
+  .main-grid, .home-wrapper { grid-template-columns: 220px 1fr 280px; padding: 0 12px; }
+}
+@media (max-width: 1024px) {
+  .main-grid, .home-wrapper { grid-template-columns: 1fr; gap: 18px; }
+  .rightbar { order: 3; }
+  .sidebar, .left-card { order: 1; }
+  .feed { order: 2; }
+  .nav-right { display:none; } /* compact */
+  .search-bar { width: 180px; }
+}
+@media (max-width: 560px) {
+  .search-bar { display:none; }
+  .profile-avatar { width: 64px; height: 64px; margin-top: -32px; }
+  .post-header img { width:44px; height:44px; }
+}
+/* --- FIXED SIDEBAR PROFILE CARD --- */
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 260px !important;
+}
+
+/* Main profile card */
+.profile-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(0,0,0,0.12);
+  text-align: center;
+  padding-bottom: 10px;
+  width: 100%;
+  min-height: 380px; /* 🔥 bigger height */
+}
+
+/* Cover image */
+.profile-cover {
+  width: 100%;
+  height: 120px;    /* 🔥 bigger cover height */
+  object-fit: cover;
+  border: none;
+}
+
+/* Avatar */
+.profile-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-top: -35px;
+  object-fit: cover;
+}
+
+/* Name text */
+.profile-card h4 {
+  margin-top: 12px;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+/* Email */
+.profile-card p {
+  margin: 10px 0;
+  padding-right: 5px;
+  font-size: 10px;
+  color: gray;
+}
+
+/* Stats block */
+.profile-stats {
+  margin-top: 15px;
+  background: #f7f7f7;
+  padding: 1px 2px;
+  border-top: 10px solid #eee;
+  border-bottom: 10px solid #eee;
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-stats p {
+  margin: 10;
+  font-size: 12px;
+  color: #444;
+}
+
+.profile-stats strong {
+  font-size: 15px;
+  color: black;
+}
+
+/* Extra sidebar items */
+.extra-section {
+  padding: 14px 15px;
+  margin-top: 15px;
+  text-align: left;
+}
+
+.extra-section p {
+  margin: 10px 0;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.extra-section p:hover {
+  color: #0a66c2;
+}
+

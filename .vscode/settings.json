@@ -1,0 +1,31 @@
+{
+  // ✅ Enable Tailwind IntelliSense in all relevant files
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "html",
+    "postcss": "css",
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  },
+
+  // ✅ Use ESM config path (needed for Tailwind v4)
+  "tailwindCSS.experimental.configFile": "tailwind.config.js",
+
+  // ✅ Recognize Tailwind classes inside JSX / TSX
+  "tailwindCSS.experimental.classRegex": [
+    ["tw`([^`]*)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
+    ["className\\s*=\\s*\"([^\"]*)\"", "className\\s*=\\s*`([^`]*)`"]
+  ],
+
+  // ✅ Fix false @tailwind / @apply warnings
+  "css.lint.unknownAtRules": "ignore",
+  "scss.lint.unknownAtRules": "ignore",
+  "postcss.lint.unknownAtRules": "ignore",
+
+  // ✅ Enable Emmet completions
+  "tailwindCSS.emmetCompletions": true,
+
+  // ✅ Optional: Suggest classes while typing inside quotes/backticks
+  "editor.quickSuggestions": {
+    "strings": true
+  }
+}

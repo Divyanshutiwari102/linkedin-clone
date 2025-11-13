@@ -1,0 +1,213 @@
+/* ✅ LinkedIn-Style Login Page with Navbar + Bottom Context by Divyanshu Tiwari */
+
+.login-page {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ----- NAVBAR ----- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+}
+.nav-logo {
+  height: 70px;
+}
+.nav-links {
+  display: flex;
+  gap: 12px;
+}
+.nav-btn {
+  border-radius: 24px;
+  padding: 8px 16px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.nav-btn.outline {
+  border: 1px solid #0a66c2;
+  color: #0a66c2;
+  background: white;
+}
+.nav-btn.outline:hover {
+  background: rgba(10, 102, 194, 0.08);
+}
+.nav-btn.fill {
+  border: none;
+  background: #0a66c2;
+  color: white;
+}
+.nav-btn.fill:hover {
+  background: #004182;
+}
+
+/* ----- HERO SECTION ----- */
+.login-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 80px;
+  background-color: #f3f2ef;
+}
+
+.login-left {
+  max-width: 440px;
+}
+
+.headline {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+.btn {
+  width: 100%;
+  max-width: 340px;
+  padding: 12px 0;
+  border-radius: 24px;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background: #fff;
+  transition: 0.3s;
+  margin-bottom: 12px;
+}
+.btn img {
+  height: 22px;
+}
+.btn-google {
+  background: #0a66c2;
+  color: white;
+  border: none;
+}
+.btn-google:hover {
+  background: #004182;
+}
+.btn-primary {
+  background: #0a66c2;
+  color: white;
+  border: none;
+  margin-top: 10px;
+}
+.btn-primary:hover {
+  background: #004182;
+}
+
+/* Divider */
+.divider {
+  text-align: center;
+  margin: 18px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Form */
+.form-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form-box input {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+.input-error {
+  border-color: red;
+}
+.error-text {
+  color: red;
+  font-size: 12px;
+  margin: 0;
+}
+.forgot-link {
+  color: #0a66c2;
+  font-size: 13px;
+  text-decoration: none;
+  margin-top: 4px;
+}
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+/* Terms + Join */
+.terms-text {
+  font-size: 13px;
+  color: #555;
+  margin-top: 14px;
+}
+.link {
+  color: #0a66c2;
+  cursor: pointer;
+}
+.join-text {
+  margin-top: 8px;
+  font-size: 15px;
+}
+
+/* Right side */
+.login-right img {
+  width: 480px;
+  height: auto;
+}
+
+/* ----- BOTTOM SECTION ----- */
+.bottom-section {
+  background: #f9f9f8;
+  padding: 60px 80px;
+}
+
+.section {
+  margin-bottom: 60px;
+}
+.section h2 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.section p {
+  color: #555;
+  margin-bottom: 24px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.tags span {
+  border: 1px solid #999;
+  padding: 8px 16px;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.tags span:hover {
+  border-color: #0a66c2;
+  color: #0a66c2;
+}
+.show-all {
+  border: 1px solid #0a66c2;
+  background: none;
+  color: #0a66c2;
+  padding: 8px 16px;
+  border-radius: 24px;
+  cursor: pointer;
+}
+.show-all:hover {
+  background: rgba(10, 102, 194, 0.1);
+}

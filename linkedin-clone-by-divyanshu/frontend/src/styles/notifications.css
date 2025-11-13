@@ -1,0 +1,31 @@
+.notifications-container {
+  width: 60%;
+  margin: 20px auto;
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.notifications-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.notification-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  background: #fafafa;
+}
+
+.note-message {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.note-time {
+  font-size: 12px;
+  color: gray;
+}

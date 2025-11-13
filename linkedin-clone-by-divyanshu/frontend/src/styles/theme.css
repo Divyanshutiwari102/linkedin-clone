@@ -1,0 +1,357 @@
+/* 🌟 LinkedIn Clone Global Theme — by Divyanshu Tiwari */
+
+/* ---------- Root Colors & Variables ---------- */
+:root {
+  --linkedin-blue: #0077b5;
+  --linkedin-blue-dark: #005f8c;
+  --linkedin-bg: #f3f2ef;
+  --linkedin-border: #e0e0e0;
+  --linkedin-text: #1a1a1a;
+  --linkedin-gray: #555;
+  --linkedin-light: #fafafa;
+  --linkedin-hover: #f0f0f0;
+  --linkedin-card-shadow: rgba(0, 0, 0, 0.08);
+  --transition: all 0.2s ease-in-out;
+}
+
+/* ---------- Global Reset ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: var(--linkedin-bg);
+  color: var(--linkedin-text);
+  font-family: "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  transition: var(--transition);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--linkedin-blue);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Buttons ---------- */
+button {
+  cursor: pointer;
+  font-family: inherit;
+  transition: var(--transition);
+}
+
+/* LinkedIn Primary Button */
+.btn-linkedin {
+  background-color: var(--linkedin-blue);
+  color: white;
+  font-weight: 600;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 9999px;
+  box-shadow: 0 2px 5px var(--linkedin-card-shadow);
+}
+
+.btn-linkedin:hover {
+  background-color: var(--linkedin-blue-dark);
+}
+
+/* Outline Button */
+.btn-outline {
+  border: 1px solid var(--linkedin-blue);
+  color: var(--linkedin-blue);
+  background-color: transparent;
+  padding: 8px 18px;
+  border-radius: 9999px;
+}
+
+.btn-outline:hover {
+  background-color: var(--linkedin-hover);
+}
+
+/* ---------- Cards ---------- */
+.card {
+  background-color: var(--linkedin-light);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 5px var(--linkedin-card-shadow);
+  border: 1px solid var(--linkedin-border);
+  transition: var(--transition);
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px var(--linkedin-card-shadow);
+}
+
+/* ---------- Avatar ---------- */
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ---------- Input Fields ---------- */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  border: 1px solid var(--linkedin-border);
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 14px;
+  outline: none;
+  background-color: white;
+  transition: var(--transition);
+}
+
+input:focus {
+  border-color: var(--linkedin-blue);
+  box-shadow: 0 0 0 2px rgba(0, 119, 181, 0.2);
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(156, 163, 175, 0.5);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(107, 114, 128, 0.7);
+}
+
+/* ---------- Section Headers ---------- */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--linkedin-text);
+  font-weight: 600;
+}
+
+/* ---------- Feed Area ---------- */
+.post {
+  background-color: white;
+  border: 1px solid var(--linkedin-border);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px var(--linkedin-card-shadow);
+  margin-bottom: 16px;
+  transition: var(--transition);
+}
+
+.post:hover {
+  box-shadow: 0 4px 12px var(--linkedin-card-shadow);
+}
+
+/* Post Header */
+.post-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+.post-user h4 {
+  color: var(--linkedin-text);
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.post-content {
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
+.post-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 8px;
+}
+
+/* ---------- Sidebar ---------- */
+.sidebar-star,
+.sidebar-hashtag {
+  font-size: 14px;
+  color: var(--linkedin-text);
+}
+
+.sidebar-star {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.sidebar-star:hover {
+  background-color: var(--linkedin-hover);
+}
+
+.sidebar-hashtag {
+  color: var(--linkedin-blue);
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+.sidebar-hashtag:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Comments ---------- */
+.comment {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  position: relative;
+  padding: 8px 0;
+}
+
+.comment-line {
+  position: absolute;
+  left: 16px;
+  top: 38px;
+  width: 1px;
+  height: 25px;
+  background-color: var(--linkedin-border);
+}
+
+.comment-body {
+  flex: 1;
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.comment-name {
+  font-weight: 600;
+  color: var(--linkedin-text);
+}
+
+.comment-username {
+  font-size: 13px;
+  color: var(--linkedin-gray);
+}
+
+.comment-time {
+  font-size: 12px;
+  color: var(--linkedin-gray);
+}
+
+.comment-text {
+  margin-top: 3px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--linkedin-text);
+}
+
+/* ---------- Responsive Adjustments ---------- */
+@media (max-width: 768px) {
+  .card {
+    padding: 12px;
+  }
+
+  .post-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-linkedin {
+    width: 100%;
+    text-align: center;
+  }
+}
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #ffffff;
+  color: #1a1a1a;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  padding: 16px;
+  margin-bottom: 16px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+/* --- LinkedIn Preloader Animation --- */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #eef3f8, #dce7f3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.8s ease-out;
+}
+
+.preloader.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.preloader-logo {
+  width: 220px;
+  height: auto;
+  margin-bottom: 20px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid #0077b5;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}

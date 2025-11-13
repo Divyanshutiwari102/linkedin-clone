@@ -1,0 +1,46 @@
+// ✅ Routes.tsx — Plain CSS Version by Divyanshu Tiwari
+import React from "react";
+import { Route, Routes, useLocation, Navigate } from "react-router-dom";
+
+// Screens
+import NotFoundScreen from "./screens/NotFoundScreen";
+import PrivateRoute from "./components/PrivateRoute";
+import HomeScreen from "./screens/HomeScreen";
+import WelcomingScreen from "./screens/WelcomingScreen";
+import SignUpScreen from "./screens/SignUpScreen";
+import LoginScreen from "./screens/LogInScreen";
+import NotificationsScreen from "./screens/NotificationsScreen";
+import MessagesScreen from "./screens/MessagesScreen";
+import JobsScreen from "./screens/JobsScreen";
+import MyNetworkScreen from "./screens/MyNetworkScreen";
+import ProfileScreen from "./screens/ProfileScreen";
+import ForgotPasswordScreen from "./screens/ForgotPasswordScreen";
+
+export default function RouteLayout() {
+  const location = useLocation();
+
+  return (
+    <Routes key={location.pathname} location={location}>
+      {/* ✅ Protected Routes */}
+      <Route path="/" element={<PrivateRoute />}>
+        {/* Redirect root to home screen */}
+        <Route index element={<Navigate to="/home" replace />} />
+        <Route path="home" element={<HomeScreen />} />
+        <Route path="/network" element={<MyNetworkScreen />} />
+        <Route path="jobs" element={<JobsScreen />} />
+        <Route path="messages" element={<MessagesScreen />} />
+        <Route path="/notifications" element={<NotificationsScreen />} />
+        <Route path="profile" element={<ProfileScreen />} />
+      </Route>
+
+      {/* ✅ Public Routes */}
+      <Route path="/register" element={<SignUpScreen />} />
+      <Route path="/welcome" element={<WelcomingScreen />} />
+      <Route path="/login" element={<LoginScreen />} />
+      <Route path="/forgot-password" element={<ForgotPasswordScreen />} />
+
+      {/* ✅ Fallback for unknown routes */}
+      <Route path="*" element={<NotFoundScreen />} />
+    </Routes>
+  );
+}
