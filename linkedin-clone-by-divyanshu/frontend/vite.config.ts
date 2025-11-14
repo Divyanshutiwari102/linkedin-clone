@@ -12,13 +12,13 @@ export default defineConfig(({ mode }) => {
         
         // Define block to inject ENV variables into the client bundle
         define: {
-            'import.meta.env.VITE_FIREBASE_API_KEY': JSON.stringify(env.VITE_FIREBASE_API_KEY),
-            'import.meta.env.VITE_FIREBASE_AUTH_DOMAIN': JSON.stringify(env.VITE_FIREBASE_AUTH_DOMAIN),
-            'import.meta.env.VITE_FIREBASE_PROJECT_ID': JSON.stringify(env.VITE_FIREBASE_PROJECT_ID),
-            'import.meta.env.VITE_FIREBASE_STORAGE_BUCKET': JSON.stringify(env.VITE_FIREBASE_STORAGE_BUCKET),
-            'import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID': JSON.stringify(env.VITE_FIREBASE_MESSAGING_SENDER_ID),
-            'import.meta.env.VITE_FIREBASE_APP_ID': JSON.stringify(env.VITE_FIREBASE_APP_ID),
-            'import.meta.env.VITE_FIREBASE_MEASUREMENT_ID': JSON.stringify(env.VITE_FIREBASE_MEASUREMENT_ID),
+            'import.meta.env.VITE_APP_FIREBASE_API_KEY': JSON.stringify(env.VITE_FIREBASE_API_KEY),
+            'import.meta.env.VITE_APP_FIREBASE_AUTH_DOMAIN': JSON.stringify(env.VITE_FIREBASE_AUTH_DOMAIN),
+            'import.meta.env.VITE_APP_FIREBASE_PROJECT_ID': JSON.stringify(env.VITE_FIREBASE_PROJECT_ID),
+            'import.meta.env.VITE_APP_FIREBASE_STORAGE_BUCKET': JSON.stringify(env.VITE_FIREBASE_STORAGE_BUCKET),
+            'import.meta.env.VITE_APP_FIREBASE_MESSAGING_SENDER_ID': JSON.stringify(env.VITE_FIREBASE_MESSAGING_SENDER_ID),
+            'import.meta.env.VITE_APP_FIREBASE_APP_ID': JSON.stringify(env.VITE_FIREBASE_APP_ID),
+            'import.meta.env.VITE_APP_FIREBASE_MEASUREMENT_ID': JSON.stringify(env.VITE_FIREBASE_MEASUREMENT_ID),
             
             // Inject the Backend API URL
             'import.meta.env.VITE_BACKEND_URL': JSON.stringify(env.VITE_BACKEND_URL), 
